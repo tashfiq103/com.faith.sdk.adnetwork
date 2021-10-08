@@ -34,11 +34,11 @@ namespace com.faith.sdk.adnetwork
 
             FaithAdnetworkGeneralConfiguretionInfo faithAdNetworkGeneralConfiguretionInfo = Resources.Load<FaithAdnetworkGeneralConfiguretionInfo>("FaithAnalyticsGeneralConfiguretionInfo");
 
-            Object[] adNetworkConfiguretionObjects = Resources.LoadAll("", typeof(FaithBaseClassForAdNetworkConfiguretionInfo));
+            Object[] adNetworkConfiguretionObjects = Resources.LoadAll("", typeof(FaithAdNetworkBaseClassForConfiguretionInfo));
             foreach (Object analyticsConfiguretionObject in adNetworkConfiguretionObjects)
             {
 
-                FaithBaseClassForAdNetworkConfiguretionInfo faithAdNetworkConfiguretion = (FaithBaseClassForAdNetworkConfiguretionInfo)analyticsConfiguretionObject;
+                FaithAdNetworkBaseClassForConfiguretionInfo faithAdNetworkConfiguretion = (FaithAdNetworkBaseClassForConfiguretionInfo)analyticsConfiguretionObject;
                 if (faithAdNetworkConfiguretion != null)
                     faithAdNetworkConfiguretion.Initialize(faithAdNetworkGeneralConfiguretionInfo, IsATTEnabled);
             }

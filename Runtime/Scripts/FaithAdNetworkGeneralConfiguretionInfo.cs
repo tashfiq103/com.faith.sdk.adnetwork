@@ -10,6 +10,13 @@ namespace com.faith.sdk.adnetwork
         public const float EDITOR_LABEL_WIDTH = 200;
         public const string NAME_OF_SDK = "FaithAdNetwork";
 
+        public FaithAdNetworkBaseClassForConfiguretionInfo SelectedAdConfig
+        {
+            get {
+                return _selectedAdConfiguretion;
+            }
+        }
+
         #endregion
 
         #region Private Variables
@@ -19,6 +26,8 @@ namespace com.faith.sdk.adnetwork
         [HideInInspector, SerializeField] private bool _showAdNetworks = false;
         [HideInInspector, SerializeField] private bool _showDebuggingSetting = false;
 #endif
+
+        [HideInInspector, SerializeField] private FaithAdNetworkBaseClassForConfiguretionInfo _selectedAdConfiguretion;
 
         [HideInInspector, SerializeField] private bool _autoInitialize = true;
 

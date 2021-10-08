@@ -3,7 +3,7 @@ namespace com.faith.sdk.adnetwork
     using UnityEngine;
     using UnityEngine.Events;
 
-    public abstract class FaithBaseClassForAdNetworkConfiguretionInfo : ScriptableObject
+    public abstract class FaithAdNetworkBaseClassForConfiguretionInfo : ScriptableObject
     {
         #region Public Variables
 

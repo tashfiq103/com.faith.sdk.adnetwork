@@ -9,11 +9,11 @@ namespace com.faith.sdk.adnetwork
     {
         public static void LookForSDK()
         {
-            Object[] analyticsConfiguretionObjects = Resources.LoadAll("", typeof(FaithBaseClassForAdNetworkConfiguretionInfo));
+            Object[] analyticsConfiguretionObjects = Resources.LoadAll("", typeof(FaithAdNetworkBaseClassForConfiguretionInfo));
             foreach (Object analyticsConfiguretionObject in analyticsConfiguretionObjects)
             {
 
-                FaithBaseClassForAdNetworkConfiguretionInfo analyticsConfiguretion = (FaithBaseClassForAdNetworkConfiguretionInfo)analyticsConfiguretionObject;
+                FaithAdNetworkBaseClassForConfiguretionInfo analyticsConfiguretion = (FaithAdNetworkBaseClassForConfiguretionInfo)analyticsConfiguretionObject;
                 if (analyticsConfiguretion != null)
                     analyticsConfiguretion.SetNameAndIntegrationStatus();
             }
