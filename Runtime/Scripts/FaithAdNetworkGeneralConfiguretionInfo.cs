@@ -3,7 +3,7 @@ namespace com.faith.sdk.adnetwork
     using UnityEngine;
 
     [CreateAssetMenu(fileName = "FaithAdnetworkGeneralConfiguretionInfo", menuName = NAME_OF_SDK + "/FaithAdnetworkGeneralConfiguretionInfo")]
-    public class FaithAdnetworkGeneralConfiguretionInfo : ScriptableObject
+    public class FaithAdNetworkGeneralConfiguretionInfo : ScriptableObject
     {
         #region Public Variables
 

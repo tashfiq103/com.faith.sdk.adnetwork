@@ -7,7 +7,7 @@ namespace com.faith.sdk.adnetwork
 	{
         #region Private Variables
 
-        private static FaithAdnetworkGeneralConfiguretionInfo _faithAnalyticsGeneralConfiguretionInfo;
+        private static FaithAdNetworkGeneralConfiguretionInfo _faithAnalyticsGeneralConfiguretionInfo;
 
 		#endregion
 
@@ -16,7 +16,7 @@ namespace com.faith.sdk.adnetwork
 		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
 		private static void OnGameStart()
 		{
-			_faithAnalyticsGeneralConfiguretionInfo = Resources.Load<FaithAdnetworkGeneralConfiguretionInfo>("FaithAdnetworkGeneralConfiguretionInfo");
+			_faithAnalyticsGeneralConfiguretionInfo = Resources.Load<FaithAdNetworkGeneralConfiguretionInfo>("FaithAdnetworkGeneralConfiguretionInfo");
 		}
 
 		private static string DecimalToHexNumeric(int value)
@@ -124,7 +124,7 @@ namespace com.faith.sdk.adnetwork
 				Debug.Log(string.Format(
 					"<color={0}>{1}{2}</color>",
 					GetHexColorFromRGBColor(_faithAnalyticsGeneralConfiguretionInfo.InfoLogColor),
-					"[" + FaithAdnetworkGeneralConfiguretionInfo.NAME_OF_SDK + "]: ",
+					"[" + FaithAdNetworkGeneralConfiguretionInfo.NAME_OF_SDK + "]: ",
 					message));
 			}
 
@@ -138,7 +138,7 @@ namespace com.faith.sdk.adnetwork
 				Debug.LogWarning(string.Format(
 					"<color={0}>{1}{2}</color>",
 					GetHexColorFromRGBColor(_faithAnalyticsGeneralConfiguretionInfo.WarningLogColor),
-					"[" + FaithAdnetworkGeneralConfiguretionInfo.NAME_OF_SDK + "]: ",
+					"[" + FaithAdNetworkGeneralConfiguretionInfo.NAME_OF_SDK + "]: ",
 					message));
 			}
 
@@ -151,7 +151,7 @@ namespace com.faith.sdk.adnetwork
 				Debug.LogError(string.Format(
 					"<color={0}>{1}{2}</color>",
 					GetHexColorFromRGBColor(_faithAnalyticsGeneralConfiguretionInfo.ErrorLogColor),
-					"[" + FaithAdnetworkGeneralConfiguretionInfo.NAME_OF_SDK + "]: ",
+					"[" + FaithAdNetworkGeneralConfiguretionInfo.NAME_OF_SDK + "]: ",
 					message));
 			}
 

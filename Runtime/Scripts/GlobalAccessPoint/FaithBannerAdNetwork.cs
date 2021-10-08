@@ -2,11 +2,11 @@ namespace com.faith.sdk.adnetwork
 {
     using UnityEngine;
 
-    public static class FaithAdNetworkBannerAd
+    public static class FaithBannerAdNetwork
     {
         #region Private Variables
 
-        private static FaithAdnetworkGeneralConfiguretionInfo _faithAdNetworkGeneralConfiguretionInfo;
+        private static FaithAdNetworkGeneralConfiguretionInfo _faithAdNetworkGeneralConfiguretionInfo;
 
         #endregion
 
@@ -15,7 +15,7 @@ namespace com.faith.sdk.adnetwork
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void OnGameStart()
         {
-            _faithAdNetworkGeneralConfiguretionInfo = Resources.Load<FaithAdnetworkGeneralConfiguretionInfo>("FaithAdnetworkGeneralConfiguretionInfo");
+            _faithAdNetworkGeneralConfiguretionInfo = Resources.Load<FaithAdNetworkGeneralConfiguretionInfo>("FaithAdnetworkGeneralConfiguretionInfo");
         }
 
         

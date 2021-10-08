@@ -19,7 +19,7 @@ namespace com.faith.sdk.adnetwork
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void OnGameStart()
         {
-            FaithAdnetworkGeneralConfiguretionInfo faithAnalyticsGeneralConfiguretionInfo = Resources.Load<FaithAdnetworkGeneralConfiguretionInfo>("FaithAnalyticsGeneralConfiguretionInfo");
+            FaithAdNetworkGeneralConfiguretionInfo faithAnalyticsGeneralConfiguretionInfo = Resources.Load<FaithAdNetworkGeneralConfiguretionInfo>("FaithAnalyticsGeneralConfiguretionInfo");
 
             if (faithAnalyticsGeneralConfiguretionInfo.IsAutoInitialize) {
 
@@ -32,7 +32,7 @@ namespace com.faith.sdk.adnetwork
 
             FaithAdNetworkManager.IsATTEnabled = IsATTEnabled;
 
-            FaithAdnetworkGeneralConfiguretionInfo faithAdNetworkGeneralConfiguretionInfo = Resources.Load<FaithAdnetworkGeneralConfiguretionInfo>("FaithAnalyticsGeneralConfiguretionInfo");
+            FaithAdNetworkGeneralConfiguretionInfo faithAdNetworkGeneralConfiguretionInfo = Resources.Load<FaithAdNetworkGeneralConfiguretionInfo>("FaithAnalyticsGeneralConfiguretionInfo");
 
             Object[] adNetworkConfiguretionObjects = Resources.LoadAll("", typeof(FaithAdNetworkBaseClassForConfiguretionInfo));
             foreach (Object analyticsConfiguretionObject in adNetworkConfiguretionObjects)

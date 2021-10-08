@@ -117,7 +117,7 @@ namespace com.faith.sdk.adnetwork
 
         public abstract void SetNameAndIntegrationStatus();
 
-        public abstract void Initialize(FaithAdnetworkGeneralConfiguretionInfo faithAdnetworkGeneralConfiguretionInfo, bool isATTEnable = false);
+        public abstract void Initialize(FaithAdNetworkGeneralConfiguretionInfo faithAdNetworkGeneralConfiguretionInfo, bool isATTEnable = false);
 
         /// <summary>
         /// You can write your editor script for the variables on your derived class before the template editor script
