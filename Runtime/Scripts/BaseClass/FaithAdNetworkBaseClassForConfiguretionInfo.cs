@@ -67,7 +67,7 @@ namespace com.faith.sdk.adnetwork
 
 #if UNITY_EDITOR
 
-
+        [HideInInspector, SerializeField] private bool _showSettings;
         [HideInInspector, SerializeField] private bool _showRewardedAdSettings;
         [HideInInspector, SerializeField] private bool _showInterstitialAdSettings;
         [HideInInspector, SerializeField] private bool _showBannerAdSettings;

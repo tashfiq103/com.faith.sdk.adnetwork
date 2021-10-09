@@ -3,18 +3,19 @@ namespace com.faith.sdk.adnetwork
     using UnityEngine;
     using UnityEngine.Events;
 
+    //[CreateAssetMenu(fileName = "FaithLionKitAdNetworkConfiguretionInfo", menuName = FaithAdNetworkGeneralConfiguretionInfo.NAME_OF_SDK + "/FaithLionKitAdNetworkConfiguretionInfo")]
     public class FaithLionKitAdNetworkConfiguretionInfo : FaithAdNetworkBaseClassForConfiguretionInfo
     {
         public override void Initialize(FaithAdNetworkGeneralConfiguretionInfo faithAdNetworkGeneralConfiguretionInfo, bool isATTEnable = false)
         {
-//#if FaithSdk_LionKit
+#if FaithAdNetwork_LionKit
             FaithLionKitAdNetwork.Initialize(this);
-//#endif
+#endif
         }
 
         public override bool IsBannerAdReady()
         {
-#if FaithSdk_LionKit
+#if FaithAdNetwork_LionKit
             return FaithLionKitAdNetwork.BannerAd.IsBannerAdReady();
 #else
             return false;
@@ -23,21 +24,21 @@ namespace com.faith.sdk.adnetwork
 
         public override void ShowBannerAd(string adPlacement = "banner", int playerLevel = 0)
         {
-#if FaithSdk_LionKit
+#if FaithAdNetwork_LionKit
             FaithLionKitAdNetwork.BannerAd.ShowBannerAd(adPlacement, playerLevel);
 #endif
         }
 
         public override void HideBannerAd()
         {
-#if FaithSdk_LionKit
+#if FaithAdNetwork_LionKit
             FaithLionKitAdNetwork.BannerAd.HideBannerAd();
 #endif
         }
 
         public override bool IsInterstitialAdReady()
         {
-#if FaithSdk_LionKit
+#if FaithAdNetwork_LionKit
             return FaithLionKitAdNetwork.InterstitialAd.IsInterstitialAdReady();
 #else
             return false;
@@ -46,14 +47,14 @@ namespace com.faith.sdk.adnetwork
 
         public override void ShowInterstitialAd(string adPlacement = "interstitial", UnityAction OnAdFailed = null, UnityAction OnAdClosed = null)
         {
-#if FaithSdk_LionKit
+#if FaithAdNetwork_LionKit
             FaithLionKitAdNetwork.InterstitialAd.ShowInterstitialAd(adPlacement, OnAdFailed, OnAdClosed);
 #endif
         }
 
         public override bool IsRewardedAdReady()
         {
-#if FaithSdk_LionKit
+#if FaithAdNetwork_LionKit
             return FaithLionKitAdNetwork.RewardedAd.IsRewardedAdReady();
 #else
             return false;
@@ -62,17 +63,17 @@ namespace com.faith.sdk.adnetwork
 
         public override void ShowRewardedAd(string adPlacement, UnityAction<bool> OnAdClosed, UnityAction OnAdFailed = null)
         {
-#if FaithSdk_LionKit
+#if FaithAdNetwork_LionKit
             FaithLionKitAdNetwork.RewardedAd.ShowRewardedAd(adPlacement, OnAdClosed, OnAdFailed);
 #endif
         }
 
         public override void SetNameAndIntegrationStatus()
         {
-            string sdkName = FaithSdkConstant.FaithSdk_LionKit;
-            SetNameOfConfiguretion(sdkName, "AdNetwork");
+            string sdkName = "FaithAdNetwork_LionKit";
+            SetNameOfConfiguretion(sdkName);
 #if UNITY_EDITOR
-            _isSDKIntegrated = FaithSdkScriptDefiniedSymbol.CheckLionKitIntegration(sdkName);
+            _isSDKIntegrated = FaithAdNetworkScriptDefineSymbol.CheckLionKitIntegration(sdkName);
 #endif
         }
 

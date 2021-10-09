@@ -1,6 +1,6 @@
 namespace com.faith.sdk.adnetwork
 {
-//#if FaithSdk_LionKit
+//#if FaithAdNetwork_LionKit
 
     using UnityEngine.Events;
     using LionStudios.Ads;

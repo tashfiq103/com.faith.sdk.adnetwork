@@ -19,7 +19,7 @@ namespace com.faith.sdk.adnetwork
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void OnGameStart()
         {
-            FaithAdNetworkGeneralConfiguretionInfo faithAnalyticsGeneralConfiguretionInfo = Resources.Load<FaithAdNetworkGeneralConfiguretionInfo>("FaithAnalyticsGeneralConfiguretionInfo");
+            FaithAdNetworkGeneralConfiguretionInfo faithAnalyticsGeneralConfiguretionInfo = Resources.Load<FaithAdNetworkGeneralConfiguretionInfo>("FaithAdNetworkGeneralConfiguretionInfo");
 
             if (faithAnalyticsGeneralConfiguretionInfo.IsAutoInitialize) {
 
@@ -30,20 +30,28 @@ namespace com.faith.sdk.adnetwork
 
         public static void Initialize(bool IsATTEnabled = false) {
 
-            FaithAdNetworkManager.IsATTEnabled = IsATTEnabled;
-
-            FaithAdNetworkGeneralConfiguretionInfo faithAdNetworkGeneralConfiguretionInfo = Resources.Load<FaithAdNetworkGeneralConfiguretionInfo>("FaithAnalyticsGeneralConfiguretionInfo");
-
-            Object[] adNetworkConfiguretionObjects = Resources.LoadAll("", typeof(FaithAdNetworkBaseClassForConfiguretionInfo));
-            foreach (Object analyticsConfiguretionObject in adNetworkConfiguretionObjects)
+            if (!IsInitialized)
             {
 
-                FaithAdNetworkBaseClassForConfiguretionInfo faithAdNetworkConfiguretion = (FaithAdNetworkBaseClassForConfiguretionInfo)analyticsConfiguretionObject;
-                if (faithAdNetworkConfiguretion != null)
-                    faithAdNetworkConfiguretion.Initialize(faithAdNetworkGeneralConfiguretionInfo, IsATTEnabled);
-            }
+                FaithAdNetworkManager.IsATTEnabled = IsATTEnabled;
 
-            IsInitialized = true;
+                FaithAdNetworkGeneralConfiguretionInfo faithAdNetworkGeneralConfiguretionInfo = Resources.Load<FaithAdNetworkGeneralConfiguretionInfo>("FaithAdNetworkGeneralConfiguretionInfo");
+
+                Object[] adNetworkConfiguretionObjects = Resources.LoadAll("", typeof(FaithAdNetworkBaseClassForConfiguretionInfo));
+                foreach (Object analyticsConfiguretionObject in adNetworkConfiguretionObjects)
+                {
+
+                    FaithAdNetworkBaseClassForConfiguretionInfo faithAdNetworkConfiguretion = (FaithAdNetworkBaseClassForConfiguretionInfo)analyticsConfiguretionObject;
+                    if (faithAdNetworkConfiguretion != null)
+                        faithAdNetworkConfiguretion.Initialize(faithAdNetworkGeneralConfiguretionInfo, IsATTEnabled);
+                }
+
+                IsInitialized = true;
+            }
+            else {
+
+                FaithAdNetworkLogger.LogWarning("FaithAdNetwork is already initialized");
+            }
         }
     }
 }

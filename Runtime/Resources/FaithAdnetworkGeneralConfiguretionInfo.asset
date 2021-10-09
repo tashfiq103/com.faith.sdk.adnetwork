@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5691e7deb7e17462b90e860f005feaab, type: 3}
-  m_Name: FaithAdnetworkGeneralConfiguretionInfo
+  m_Name: FaithAdNetworkGeneralConfiguretionInfo
   m_EditorClassIdentifier: com.faith.sdk.adnetwork:com.faith.sdk.adnetwork:FaithAdnetworkGeneralConfiguretionInfo
-  _showGeneralSetting: 0
-  _showAdNetworks: 0
+  _showGeneralSetting: 1
+  _showAdNetworks: 1
   _showDebuggingSetting: 0
-  _selectedAdConfiguretion: {fileID: 0}
-  _autoInitialize: 1
+  _selectedAdConfiguretion: {fileID: 11400000, guid: 2006e5965a1994c77809b14ddbdb84d7,
+    type: 2}
+  _autoInitialize: 0
   _showAdNetworkLogInConsole: 1
   _infoLogColor: {r: 0, g: 1, b: 1, a: 1}
   _warningLogColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
