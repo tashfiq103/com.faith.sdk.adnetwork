@@ -1,6 +1,6 @@
 namespace com.faith.sdk.adnetwork
 {
-//#if FaithAdNetwork_LionKit
+#if FaithAdNetwork_LionKit
 
     public static class FaithLionKitAdNetwork
     {
@@ -26,5 +26,5 @@ namespace com.faith.sdk.adnetwork
 
     }
 
-//#endif
+#endif
 }
