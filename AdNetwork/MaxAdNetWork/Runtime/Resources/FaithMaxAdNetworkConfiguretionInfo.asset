@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d60e35d0d6d04f1dace0ef63eec85b2, type: 3}
+  m_Name: FaithMaxAdNetworkConfiguretionInfo
+  m_EditorClassIdentifier: 
+  _showSettings: 0
+  _showRewardedAdSettings: 0
+  _showInterstitialAdSettings: 0
+  _showBannerAdSettings: 0
+  _showCrossPromoAdSettings: 0
+  _nameOfConfiguretion: 
+  _isSDKIntegrated: 0
+  _enableRewardedAd: 0
+  _adUnitIdForRewardedAd_Android: 
+  _adUnitIdForRewardedAd_iOS: 
+  _enableInterstitialAd: 0
+  _adUnitIdForInterstitialAd_Android: 
+  _adUnitIdForInterstitialAd_iOS: 
+  _enableBannerAd: 0
+  _adUnitIdForBannerAd_Android: 
+  _adUnitIdForBannerAd_iOS: 
+  _showBannerAdManually: 0
+  _enableCrossPromoAd: 0
