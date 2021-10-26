@@ -2,7 +2,7 @@ namespace com.faith.sdk.adnetwork
 {
     using UnityEngine;
 
-    public static class FaithAdNetworkManager
+    public static class FaithAdNetworkManager   
     {
         public static bool IsATTEnabled
         {
@@ -44,6 +44,11 @@ namespace com.faith.sdk.adnetwork
                     FaithAdNetworkBaseClassForConfiguretionInfo faithAdNetworkConfiguretion = (FaithAdNetworkBaseClassForConfiguretionInfo)analyticsConfiguretionObject;
                     if (faithAdNetworkConfiguretion != null)
                         faithAdNetworkConfiguretion.Initialize(faithAdNetworkGeneralConfiguretionInfo, IsATTEnabled);
+                }
+
+                if (!faithAdNetworkGeneralConfiguretionInfo.SelectedAdConfig.IsShowBannerAdManually) {
+
+                    faithAdNetworkGeneralConfiguretionInfo.SelectedAdConfig.ShowBannerAd();
                 }
 
                 IsInitialized = true;

@@ -25,7 +25,7 @@ MonoBehaviour:
   _enableInterstitialAd: 1
   _adUnitIdForInterstitialAd_Android: 
   _adUnitIdForInterstitialAd_iOS: 
-  _enableBannerAd: 1
+  _enableBannerAd: 0
   _adUnitIdForBannerAd_Android: 
   _adUnitIdForBannerAd_iOS: 
   _showBannerAdManually: 0
