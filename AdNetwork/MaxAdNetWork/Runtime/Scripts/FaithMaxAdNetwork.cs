@@ -1,5 +1,6 @@
 namespace com.faith.sdk.adnetwork
 {
+#if FaithAdNetwork_Max
     public static class FaithMaxAdNetwork
     {
         #region Public Variables
@@ -22,5 +23,6 @@ namespace com.faith.sdk.adnetwork
 
         #endregion
     }
+#endif
 }
 

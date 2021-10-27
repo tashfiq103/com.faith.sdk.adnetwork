@@ -178,8 +178,7 @@ namespace com.faith.sdk.adnetwork
             titleStyle.alignment = TextAnchor.MiddleLeft;
             titleStyle.padding.left = 18;
 
-            EditorGUI.BeginDisabledGroup(!_isSDKIntegrated.boolValue);
-            {
+            
                 EditorGUILayout.BeginHorizontal(GUI.skin.box);
                 {
                     if (GUILayout.Button(titleContent, titleStyle, GUILayout.Width(EditorGUIUtility.currentViewWidth - 100f)))
@@ -192,22 +191,26 @@ namespace com.faith.sdk.adnetwork
                         );
                     }
 
-                    if (_faithAdNetworkGeneralConfiguretionInfo.SelectedAdConfig == adNetworkConfiguretion)
+                    EditorGUI.BeginDisabledGroup(!_isSDKIntegrated.boolValue);
                     {
-                        if (GUILayout.Button("Disable", GUILayout.Width(80)))
+                        if (_faithAdNetworkGeneralConfiguretionInfo.SelectedAdConfig == adNetworkConfiguretion)
                         {
-                            _selectedAdConfiguretion.objectReferenceValue = null;
-                            _selectedAdConfiguretion.serializedObject.ApplyModifiedProperties();
+                            if (GUILayout.Button("Disable", GUILayout.Width(80)))
+                            {
+                                _selectedAdConfiguretion.objectReferenceValue = null;
+                                _selectedAdConfiguretion.serializedObject.ApplyModifiedProperties();
+                            }
+                        }
+                        else
+                        {
+                            if (GUILayout.Button("Enable", GUILayout.Width(80)))
+                            {
+                                _selectedAdConfiguretion.objectReferenceValue = adNetworkConfiguretion;
+                                _selectedAdConfiguretion.serializedObject.ApplyModifiedProperties();
+                            }
                         }
                     }
-                    else
-                    {
-                        if (GUILayout.Button("Enable", GUILayout.Width(80)))
-                        {
-                            _selectedAdConfiguretion.objectReferenceValue = adNetworkConfiguretion;
-                            _selectedAdConfiguretion.serializedObject.ApplyModifiedProperties();
-                        }
-                    }
+                    EditorGUI.EndDisabledGroup();
 
                     GUILayout.FlexibleSpace();
                 }
@@ -216,7 +219,7 @@ namespace com.faith.sdk.adnetwork
                 if (_showSettings.boolValue)
                 {
 
-                    EditorGUI.BeginDisabledGroup((_faithAdNetworkGeneralConfiguretionInfo.SelectedAdConfig == adNetworkConfiguretion) ? false : true);
+                    EditorGUI.BeginDisabledGroup(!_isSDKIntegrated.boolValue && (_faithAdNetworkGeneralConfiguretionInfo.SelectedAdConfig == adNetworkConfiguretion) ? false : true);
                     {
                         EditorGUI.indentLevel += 1;
                         adNetworkConfiguretion.PreCustomEditorGUI();
@@ -502,9 +505,6 @@ namespace com.faith.sdk.adnetwork
                     EditorGUI.EndDisabledGroup();
 
                 }
-
-            }
-            EditorGUI.EndDisabledGroup();
         }
 
         private void GeneralSettingGUI()
