@@ -52,7 +52,7 @@ namespace com.faith.sdk.adnetwork
 
         #region Editor
 
-        [MenuItem("Faith/FaithAdNetwork Integration Manager")]
+        [MenuItem("FAITH/FaithAdNetwork Integration Manager")]
         public static void Create()
         {
             if (_reference == null)
@@ -219,7 +219,7 @@ namespace com.faith.sdk.adnetwork
                 if (_showSettings.boolValue)
                 {
 
-                    EditorGUI.BeginDisabledGroup(!_isSDKIntegrated.boolValue && (_faithAdNetworkGeneralConfiguretionInfo.SelectedAdConfig == adNetworkConfiguretion) ? false : true);
+                    EditorGUI.BeginDisabledGroup(_isSDKIntegrated.boolValue && (_faithAdNetworkGeneralConfiguretionInfo.SelectedAdConfig == adNetworkConfiguretion) ? false : true);
                     {
                         EditorGUI.indentLevel += 1;
                         adNetworkConfiguretion.PreCustomEditorGUI();

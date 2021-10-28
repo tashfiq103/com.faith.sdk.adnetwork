@@ -17,8 +17,8 @@ MonoBehaviour:
   _showInterstitialAdSettings: 0
   _showBannerAdSettings: 0
   _showCrossPromoAdSettings: 0
-  _nameOfConfiguretion: 
-  _isSDKIntegrated: 0
+  _nameOfConfiguretion: Max
+  _isSDKIntegrated: 1
   _enableRewardedAd: 0
   _adUnitIdForRewardedAd_Android: 
   _adUnitIdForRewardedAd_iOS: 
