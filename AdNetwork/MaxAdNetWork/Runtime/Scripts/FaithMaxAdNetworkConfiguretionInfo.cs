@@ -33,7 +33,7 @@ namespace com.faith.sdk.adnetwork
         public override void Initialize(FaithAdNetworkGeneralConfiguretionInfo faithAdNetworkGeneralConfiguretionInfo, bool isATTEnable = false)
         {
 #if FaithAdNetwork_Max
-
+            FaithMaxAdNetwork.Initialize(this);
 #endif
         }
 

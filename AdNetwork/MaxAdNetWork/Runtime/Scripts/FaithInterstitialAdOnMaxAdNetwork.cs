@@ -29,6 +29,7 @@ namespace com.faith.sdk.adnetwork
             // Interstitial ad is ready for you to show. MaxSdk.IsInterstitialReady(adUnitId) now returns 'true'
 
             // Reset retry attempt
+            FaithAdNetworkLogger.LogError("Successfully Loaded InterstitialAd");
             _retryAttempt = 0;
         }
 
@@ -36,6 +37,8 @@ namespace com.faith.sdk.adnetwork
         {
             // Interstitial ad failed to load 
             // AppLovin recommends that you retry with exponentially higher delays, up to a maximum delay (in this case 64 seconds)
+
+            FaithAdNetworkLogger.LogError("Failed To Load InterstitialAd");
 
             _retryAttempt++;
             float retryDelay = Mathf.Pow(2, Mathf.Min(6, _retryAttempt));

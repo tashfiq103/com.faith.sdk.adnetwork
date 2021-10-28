@@ -191,6 +191,20 @@ namespace com.faith.sdk.adnetwork
 
         #region Public Callback
 
+        
+
+        public static bool CheckLionKitIntegration(string sdkName)
+        {
+            bool isAdded = IsPackageBeenAddedToManifest("com.lionstudios.release.lionkit");
+            UpdateDefines(
+                    sdkName,
+                    isAdded,
+                    new BuildTargetGroup[] { BuildTargetGroup.Android, BuildTargetGroup.iOS }
+                );
+
+            return isAdded;
+        }
+
         public static bool CheckMaxAdNetworkIntegrated(string sdkName)
         {
             bool isAdded = AssetDatabase.IsValidFolder("Assets/MaxSdk/Scripts");
@@ -202,15 +216,14 @@ namespace com.faith.sdk.adnetwork
             return isAdded;
         }
 
-        public static bool CheckLionKitIntegration(string sdkName)
+        public static bool CheckUnityAdNetworkIntegrated(string sdkName)
         {
-            bool isAdded = IsPackageBeenAddedToManifest("com.lionstudios.release.lionkit");
+            bool isAdded = IsPackageBeenAddedToManifest("com.unity.ads");
             UpdateDefines(
                     sdkName,
                     isAdded,
                     new BuildTargetGroup[] { BuildTargetGroup.Android, BuildTargetGroup.iOS }
                 );
-
             return isAdded;
         }
 

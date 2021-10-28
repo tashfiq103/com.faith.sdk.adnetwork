@@ -5,8 +5,6 @@ namespace com.faith.sdk.adnetwork
 
     public class FaithBannerAdOnMaxAdNetwork : FaithAdNetworkBaseClassForBannerAd
     {
-
-
         #region Public Callback
 
         public FaithBannerAdOnMaxAdNetwork(FaithAdNetworkBaseClassForConfiguretionInfo adConfiguretion)

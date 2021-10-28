@@ -28,6 +28,7 @@ namespace com.faith.sdk.adnetwork
             // Rewarded ad is ready for you to show. MaxSdk.IsRewardedAdReady(adUnitId) now returns 'true'.
 
             // Reset retry attempt
+            FaithAdNetworkLogger.LogError("Successfully Loaded RewardedAd");
             _retryAttempt = 0;
         }
 
@@ -36,17 +37,20 @@ namespace com.faith.sdk.adnetwork
             // Rewarded ad failed to load 
             // AppLovin recommends that you retry with exponentially higher delays, up to a maximum delay (in this case 64 seconds).
 
+            FaithAdNetworkLogger.LogError("Failed To Load RewardedAd");
+
             _retryAttempt++;
             float retryDelay = Mathf.Pow(2, Mathf.Min(6, _retryAttempt));
 
             LoadAd(retryDelay);
             _OnAdFailed?.Invoke();
+
         }
 
         private void OnRewardedAdDisplayedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
         {
 
-            FaithAdNetworkLogger.Log("Displayed Rewarded Ad");
+            FaithAdNetworkLogger.Log("Displayed RewardedAd");
 
             _isEligibleForReward = false;
             IsAdRunning = true;
@@ -57,7 +61,7 @@ namespace com.faith.sdk.adnetwork
         private void OnRewardedAdFailedToDisplayEvent(string adUnitId, MaxSdkBase.ErrorInfo errorInfo, MaxSdkBase.AdInfo adInfo)
         {
 
-            FaithAdNetworkLogger.LogError("Failed To Display Rewarded Ad");
+            FaithAdNetworkLogger.LogError("Failed To Display RewardedAd");
 
             // Rewarded ad failed to display. AppLovin recommends that you load the next ad.
             IsAdRunning = false;
@@ -69,13 +73,13 @@ namespace com.faith.sdk.adnetwork
         private void OnRewardedAdClickedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
         {
 
-            FaithAdNetworkLogger.Log("Clicked Rewarded Ad");
+            FaithAdNetworkLogger.Log("Clicked RewardedAd");
         }
 
         private void OnRewardedAdHiddenEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
         {
 
-            FaithAdNetworkLogger.Log("Closed Rewarded Ad");
+            FaithAdNetworkLogger.Log("Closed RewardedAd");
 
             // Rewarded ad is hidden. Pre-load the next ad
             IsAdRunning = false;

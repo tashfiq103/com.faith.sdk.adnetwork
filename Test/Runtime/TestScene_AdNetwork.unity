@@ -1300,7 +1300,7 @@ GameObject:
   - component: {fileID: 1372647510}
   - component: {fileID: 1372647511}
   m_Layer: 0
-  m_Name: UnityIAPTest
+  m_Name: AdNetworkTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1329,14 +1329,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1372647509}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f03dc401d81954fd485fa9ddaa06f970, type: 3}
+  m_Script: {fileID: 11500000, guid: d3d7bb2d6b6914b33afdbbf69b209fba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _smallCoinButton: {fileID: 1300796278}
-  _largeCoinButton: {fileID: 78255788}
-  _noAdButton: {fileID: 359559092}
-  _divaPackButton: {fileID: 899335510}
-  _restorePurchaseButton: {fileID: 126972760}
+  _bannerAdShowButton: {fileID: 1300796278}
+  _bannerAdHideButton: {fileID: 78255788}
+  _interstitialAdButton: {fileID: 359559092}
+  _rewardedAdButton: {fileID: 899335510}
+  _mrecAdButton: {fileID: 126972760}
 --- !u!1 &1409950707
 GameObject:
   m_ObjectHideFlags: 0

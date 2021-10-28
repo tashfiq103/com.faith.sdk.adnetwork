@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3764f36fbbd04019af114841a3f9d32, type: 3}
+  m_Name: FaithUnityAdNetworkConfiguretionInfo
+  m_EditorClassIdentifier: 
+  _showSettings: 1
+  _showRewardedAdSettings: 1
+  _showInterstitialAdSettings: 1
+  _showBannerAdSettings: 1
+  _showCrossPromoAdSettings: 0
+  _nameOfConfiguretion: Unity
+  _isSDKIntegrated: 1
+  _enableRewardedAd: 1
+  _adUnitIdForRewardedAd_Android: Android_Rewarded
+  _adUnitIdForRewardedAd_iOS: iOS_Rewarded
+  _enableInterstitialAd: 1
+  _adUnitIdForInterstitialAd_Android: video
+  _adUnitIdForInterstitialAd_iOS: video
+  _enableBannerAd: 0
+  _adUnitIdForBannerAd_Android: 
+  _adUnitIdForBannerAd_iOS: 
+  _showBannerAdManually: 0
+  _enableCrossPromoAd: 0
+  _androidGameID: 3211750
+  _iOSGameID: 3211751
+  _testMode: 1
+  _enablePerPlacementMode: 0
