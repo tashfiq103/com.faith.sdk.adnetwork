@@ -46,10 +46,6 @@ namespace com.faith.sdk.adnetwork
                         faithAdNetworkConfiguretion.Initialize(faithAdNetworkGeneralConfiguretionInfo, IsATTEnabled);
                 }
 
-                if (!faithAdNetworkGeneralConfiguretionInfo.SelectedAdConfig.IsShowBannerAdManually) {
-
-                    faithAdNetworkGeneralConfiguretionInfo.SelectedAdConfig.ShowBannerAd();
-                }
 
                 IsInitialized = true;
             }

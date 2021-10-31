@@ -12,25 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3764f36fbbd04019af114841a3f9d32, type: 3}
   m_Name: FaithUnityAdNetworkConfiguretionInfo
   m_EditorClassIdentifier: 
-  _showSettings: 1
-  _showRewardedAdSettings: 1
-  _showInterstitialAdSettings: 1
-  _showBannerAdSettings: 1
+  _showSettings: 0
+  _showRewardedAdSettings: 0
+  _showInterstitialAdSettings: 0
+  _showBannerAdSettings: 0
   _showCrossPromoAdSettings: 0
   _nameOfConfiguretion: Unity
   _isSDKIntegrated: 1
-  _enableRewardedAd: 1
-  _adUnitIdForRewardedAd_Android: Android_Rewarded
-  _adUnitIdForRewardedAd_iOS: iOS_Rewarded
-  _enableInterstitialAd: 1
-  _adUnitIdForInterstitialAd_Android: video
-  _adUnitIdForInterstitialAd_iOS: video
+  _enableRewardedAd: 0
+  _adUnitIdForRewardedAd_Android: 
+  _adUnitIdForRewardedAd_iOS: 
+  _enableInterstitialAd: 0
+  _adUnitIdForInterstitialAd_Android: 
+  _adUnitIdForInterstitialAd_iOS: 
   _enableBannerAd: 0
   _adUnitIdForBannerAd_Android: 
   _adUnitIdForBannerAd_iOS: 
   _showBannerAdManually: 0
   _enableCrossPromoAd: 0
-  _androidGameID: 3211750
-  _iOSGameID: 3211751
-  _testMode: 1
+  _androidGameID: 
+  _iOSGameID: 
+  _testMode: 0
   _enablePerPlacementMode: 0

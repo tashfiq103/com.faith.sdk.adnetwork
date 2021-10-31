@@ -15,6 +15,8 @@ namespace com.faith.sdk.adnetwork
     {
         #region Custom Variables
 
+#if FaithAdNetwork_Unity
+
         private class UnityAdsInitializationCallback    :   IUnityAdsInitializationListener
         {
 
@@ -35,10 +37,11 @@ namespace com.faith.sdk.adnetwork
                 FaithAdNetworkLogger.Log($"Unity Ads Initialization Failed: {error.ToString()} - {message}");
             }
         }
+#endif
 
-        #endregion
+#endregion
 
-        #region Public Varaibles
+#region Public Varaibles
 
         public string GameID
         {
@@ -59,9 +62,9 @@ namespace com.faith.sdk.adnetwork
         public bool TestMode { get { return _testMode; } }
         public bool EnablePerPlacementMode { get { return _enablePerPlacementMode; } }
 
-        #endregion
+#endregion
 
-        #region Private Variables
+#region Private Variables
 
         [SerializeField] private string _androidGameID;
         [SerializeField] private string _iOSGameID;
@@ -224,7 +227,7 @@ namespace com.faith.sdk.adnetwork
 #endif
         }
 
-        #endregion
+#endregion
 
     }
 }

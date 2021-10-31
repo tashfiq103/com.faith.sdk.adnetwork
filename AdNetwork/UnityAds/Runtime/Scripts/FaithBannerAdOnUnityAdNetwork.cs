@@ -11,6 +11,9 @@ namespace com.faith.sdk.adnetwork
         private void OnBannerLoaded()
         {
             FaithAdNetworkLogger.Log("Banner Loaded");
+
+            if (!_adConfiguretion.IsShowBannerAdManually)
+                ShowBannerAd();
         }
 
         private void OnBannerLoadError(string errorMessage)
