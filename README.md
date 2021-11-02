@@ -35,9 +35,7 @@ FaithAdNetwork Integration manager comes with the following section
 
 
 ## AdNetwork
-
 ![](https://github.com/tashfiq103/com.faith.sdk.adnetwork/blob/main/_GitHubResources/ss3_analytics_overview.png)
-
 ![](https://github.com/tashfiq103/com.faith.sdk.adnetwork/blob/main/_GitHubResources/ss4_analytics_enable_disable.png)
 
 - Each AdNetwork will have their own section to confiure it settings.
