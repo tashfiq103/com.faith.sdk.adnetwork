@@ -117,7 +117,7 @@ public static class AnalyticsCall
 
 ## Debugging
 
-- You will be able to "Toggle" the FaithAnalytics log by taping "Show AdNetwork Log In Console".
+- You will be able to "Toggle" the FaithAdNetworks log by taping "Show AdNetwork Log In Console".
 - You will be able to change the colors of the log on the following section as well.
 
 ![](https://github.com/tashfiq103/com.faith.sdk.adnetwork/blob/main/_GitHubResources/ss8_debugging.png)
