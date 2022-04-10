@@ -18,7 +18,7 @@ MonoBehaviour:
   _showBannerAdSettings: 0
   _showCrossPromoAdSettings: 0
   _nameOfConfiguretion: Unity
-  _isSDKIntegrated: 1
+  _isSDKIntegrated: 0
   _enableRewardedAd: 0
   _adUnitIdForRewardedAd_Android: 
   _adUnitIdForRewardedAd_iOS: 

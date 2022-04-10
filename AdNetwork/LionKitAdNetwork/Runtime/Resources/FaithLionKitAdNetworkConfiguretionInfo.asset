@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11e0236436fed4ae7b792fec183d6ec8, type: 3}
   m_Name: FaithLionKitAdNetworkConfiguretionInfo
   m_EditorClassIdentifier: 
-  _showSettings: 0
+  _showSettings: 1
   _showRewardedAdSettings: 1
   _showInterstitialAdSettings: 1
   _showBannerAdSettings: 1

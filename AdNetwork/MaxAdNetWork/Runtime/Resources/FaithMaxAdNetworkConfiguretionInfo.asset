@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d60e35d0d6d04f1dace0ef63eec85b2, type: 3}
   m_Name: FaithMaxAdNetworkConfiguretionInfo
   m_EditorClassIdentifier: 
-  _showSettings: 0
+  _showSettings: 1
   _showRewardedAdSettings: 0
   _showInterstitialAdSettings: 0
   _showBannerAdSettings: 0
@@ -30,3 +30,5 @@ MonoBehaviour:
   _adUnitIdForBannerAd_iOS: 
   _showBannerAdManually: 0
   _enableCrossPromoAd: 0
+  _maxSdkKey: Tashfiqul Bari
+  _maxUserID: 

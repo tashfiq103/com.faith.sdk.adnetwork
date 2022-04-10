@@ -15,7 +15,7 @@ MonoBehaviour:
   _showGeneralSetting: 1
   _showAdNetworks: 1
   _showDebuggingSetting: 0
-  _selectedAdConfiguretion: {fileID: 11400000, guid: 5af1ce0c8faf6493084663347dccee23,
+  _selectedAdConfiguretion: {fileID: 11400000, guid: cfb437889d2f1483eb09127a690fd032,
     type: 2}
   _autoInitialize: 0
   _showAdNetworkLogInConsole: 1

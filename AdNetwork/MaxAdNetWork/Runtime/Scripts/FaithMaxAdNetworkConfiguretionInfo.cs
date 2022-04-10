@@ -3,9 +3,28 @@ namespace com.faith.sdk.adnetwork
     using UnityEngine;
     using UnityEngine.Events;
 
+#if UNITY_EDITOR
+    using UnityEditor;
+#endif
+
     //[CreateAssetMenu(fileName = "FaithMaxAdNetworkConfiguretionInfo", menuName = FaithAdNetworkGeneralConfiguretionInfo.NAME_OF_SDK + "/FaithMaxAdNetworkConfiguretionInfo")]
     public class FaithMaxAdNetworkConfiguretionInfo : FaithAdNetworkBaseClassForConfiguretionInfo
     {
+        #region Public Variables
+
+        public string MaxSdkKey { get { return _maxSdkKey; } }
+        public bool VerboseLogingState { get { return _verboseLogingState; } }
+
+        #endregion
+
+        #region Private Variables
+
+        [SerializeField] private string _maxSdkKey;
+        [SerializeField] private bool _verboseLogingState = false;
+
+
+        #endregion
+
         public override bool AskForAdIds()
         {
             return true;
@@ -27,7 +46,13 @@ namespace com.faith.sdk.adnetwork
 
         public override void PreCustomEditorGUI()
         {
+#if UNITY_EDITOR && FaithAdNetwork_Max
 
+            _maxSdkKey = EditorGUILayout.TextField("MaxSDKKey", _maxSdkKey);
+            _verboseLogingState = EditorGUILayout.Toggle("VerboseLoging State", _verboseLogingState);
+
+            FaithAdNetworkEditorModule.DrawHorizontalLine();
+#endif
         }
 
         public override void Initialize(FaithAdNetworkGeneralConfiguretionInfo faithAdNetworkGeneralConfiguretionInfo, bool isATTEnable = false)
