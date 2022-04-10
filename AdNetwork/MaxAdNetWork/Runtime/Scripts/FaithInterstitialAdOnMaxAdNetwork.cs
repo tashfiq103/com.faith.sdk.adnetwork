@@ -29,7 +29,7 @@ namespace com.faith.sdk.adnetwork
             // Interstitial ad is ready for you to show. MaxSdk.IsInterstitialReady(adUnitId) now returns 'true'
 
             // Reset retry attempt
-            FaithAdNetworkLogger.LogError("Successfully Loaded InterstitialAd");
+            FaithAdNetworkLogger.Log("Successfully Loaded InterstitialAd");
             _retryAttempt = 0;
         }
 

@@ -28,7 +28,7 @@ namespace com.faith.sdk.adnetwork
             // Rewarded ad is ready for you to show. MaxSdk.IsRewardedAdReady(adUnitId) now returns 'true'.
 
             // Reset retry attempt
-            FaithAdNetworkLogger.LogError("Successfully Loaded RewardedAd");
+            FaithAdNetworkLogger.Log("Successfully Loaded RewardedAd");
             _retryAttempt = 0;
         }
 
