@@ -13,22 +13,23 @@ MonoBehaviour:
   m_Name: FaithMaxAdNetworkConfiguretionInfo
   m_EditorClassIdentifier: 
   _showSettings: 1
-  _showRewardedAdSettings: 0
-  _showInterstitialAdSettings: 0
-  _showBannerAdSettings: 0
+  _showRewardedAdSettings: 1
+  _showInterstitialAdSettings: 1
+  _showBannerAdSettings: 1
   _showCrossPromoAdSettings: 0
   _nameOfConfiguretion: Max
   _isSDKIntegrated: 1
-  _enableRewardedAd: 0
-  _adUnitIdForRewardedAd_Android: 
-  _adUnitIdForRewardedAd_iOS: 
-  _enableInterstitialAd: 0
-  _adUnitIdForInterstitialAd_Android: 
-  _adUnitIdForInterstitialAd_iOS: 
-  _enableBannerAd: 0
-  _adUnitIdForBannerAd_Android: 
-  _adUnitIdForBannerAd_iOS: 
+  _enableRewardedAd: 1
+  _adUnitIdForRewardedAd_Android: c9f1c0958df13840
+  _adUnitIdForRewardedAd_iOS: a739b6482150a2ff
+  _enableInterstitialAd: 1
+  _adUnitIdForInterstitialAd_Android: 3dc04ad14774c81d
+  _adUnitIdForInterstitialAd_iOS: 0f87129c3af9393a
+  _enableBannerAd: 1
+  _adUnitIdForBannerAd_Android: d8f349d597c04f11
+  _adUnitIdForBannerAd_iOS: 8d6c006dca741f83
   _showBannerAdManually: 0
   _enableCrossPromoAd: 0
-  _maxSdkKey: Tashfiqul Bari
-  _maxUserID: 
+  _maxSdkKey: XKQwEuOBNyokuUgsa1cMofABm9xfsoGyDtsXw9dnNoysz6MH66rfbV2Ed9h1Gr_7zr9LXfcnQc-gAcD_m1urJ1
+  _verboseLogingState: 0
+  _showMaxMediationDebugger: 0

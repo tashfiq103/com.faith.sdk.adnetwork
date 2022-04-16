@@ -55,12 +55,19 @@ namespace com.faith.sdk.adnetwork
                 HasConcent = true;
 #endif
 
-                foreach (UnityAction<MaxSdkBase.SdkConfiguration, bool> OnMaxInitalized in _waitingQueueForMaxSdkToBeInitialized)
+                while (_waitingQueueForMaxSdkToBeInitialized.Count > 0)
                 {
-                    OnMaxInitalized?.Invoke(_sdkConfiguration, HasConcent);
+                    _waitingQueueForMaxSdkToBeInitialized.Dequeue()?.Invoke(_sdkConfiguration, HasConcent);
                 }
 
                 _isMaxSdkInitialized = true;
+
+                if(maxAdNetworkConfiguretionInfo.ShowMaxMediationDebugger)
+                {
+                    MaxSdk.ShowMediationDebugger();
+                }
+
+                FaithAdNetworkLogger.Log("MaxInitialized");
             };
 
             MaxSdk.SetSdkKey(maxAdNetworkConfiguretionInfo.MaxSdkKey);

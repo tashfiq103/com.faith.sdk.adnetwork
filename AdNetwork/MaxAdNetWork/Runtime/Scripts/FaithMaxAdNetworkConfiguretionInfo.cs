@@ -14,14 +14,14 @@ namespace com.faith.sdk.adnetwork
 
         public string MaxSdkKey { get { return _maxSdkKey; } }
         public bool VerboseLogingState { get { return _verboseLogingState; } }
-
+        public bool ShowMaxMediationDebugger { get { return _showMaxMediationDebugger; } }
         #endregion
 
         #region Private Variables
 
         [SerializeField] private string _maxSdkKey;
         [SerializeField] private bool _verboseLogingState = false;
-
+        [SerializeField] private bool _showMaxMediationDebugger = false;
 
         #endregion
 
@@ -48,8 +48,10 @@ namespace com.faith.sdk.adnetwork
         {
 #if UNITY_EDITOR && FaithAdNetwork_Max
 
+
             _maxSdkKey = EditorGUILayout.TextField("MaxSDKKey", _maxSdkKey);
             _verboseLogingState = EditorGUILayout.Toggle("VerboseLoging State", _verboseLogingState);
+            _showMaxMediationDebugger = EditorGUILayout.Toggle("MaxMediationDebugger", _showMaxMediationDebugger);
 
             FaithAdNetworkEditorModule.DrawHorizontalLine();
 #endif

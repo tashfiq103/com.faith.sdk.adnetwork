@@ -9,6 +9,7 @@ namespace com.faith.sdk.adnetwork
 
         private static FaithAdNetworkGeneralConfiguretionInfo _faithAdNetworkGeneralConfiguretionInfo;
 
+
         #endregion
 
         #region Configuretion
@@ -43,22 +44,25 @@ namespace com.faith.sdk.adnetwork
         {
             if (_faithAdNetworkGeneralConfiguretionInfo.SelectedAdConfig != null)
             {
-
-                _faithAdNetworkGeneralConfiguretionInfo.SelectedAdConfig.ShowInterstitialAd(
+                if (_faithAdNetworkGeneralConfiguretionInfo.CanShowInterstitialAd)
+                {
+                    _faithAdNetworkGeneralConfiguretionInfo.SelectedAdConfig.ShowInterstitialAd(
                         adPlacement,
                         OnAdClosed: () => {
 
+                            FaithAdNetworkManager.RecordInterstitialAdComplete();
                             OnAdClosed?.Invoke();
 
-                            
+
                         },
                         OnAdFailed: () => {
 
                             OnAdFailed?.Invoke();
 
-                            
+
                         }
                     );
+                }
             }
             else
             {

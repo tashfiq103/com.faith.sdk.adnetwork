@@ -36,6 +36,7 @@ namespace com.faith.sdk.adnetwork
                 FaithAdNetworkManager.IsATTEnabled = IsATTEnabled;
 
                 FaithAdNetworkGeneralConfiguretionInfo faithAdNetworkGeneralConfiguretionInfo = Resources.Load<FaithAdNetworkGeneralConfiguretionInfo>("FaithAdNetworkGeneralConfiguretionInfo");
+                faithAdNetworkGeneralConfiguretionInfo.Reset();
 
                 Object[] adNetworkConfiguretionObjects = Resources.LoadAll("", typeof(FaithAdNetworkBaseClassForConfiguretionInfo));
                 foreach (Object analyticsConfiguretionObject in adNetworkConfiguretionObjects)
@@ -54,6 +55,11 @@ namespace com.faith.sdk.adnetwork
                 FaithAdNetworkLogger.LogWarning("FaithAdNetwork is already initialized");
             }
         }
+
+        public static void SetIntervalBetweenInterstitialAd(float value) { Resources.Load<FaithAdNetworkGeneralConfiguretionInfo>("FaithAdNetworkGeneralConfiguretionInfo").SetIntervalForInterstitialAdAfterRV(value); }
+        public static void SetIntervalForInterstitialAdAfterRV(float value) { Resources.Load<FaithAdNetworkGeneralConfiguretionInfo>("FaithAdNetworkGeneralConfiguretionInfo").SetIntervalForInterstitialAdAfterRV(value);}
+        public static void RecordInterstitialAdComplete() { Resources.Load<FaithAdNetworkGeneralConfiguretionInfo>("FaithAdNetworkGeneralConfiguretionInfo").RecordInterstitialAdComplete(); }
+        public static void RecordRVAdComplete() { Resources.Load<FaithAdNetworkGeneralConfiguretionInfo>("FaithAdNetworkGeneralConfiguretionInfo").RecordRVAdComplete(); }
     }
 }
 

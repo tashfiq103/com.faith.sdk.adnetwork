@@ -46,9 +46,8 @@ namespace com.faith.sdk.adnetwork
                         adPlacement,
                         (isEligibleForReward) =>
                         {
+                            FaithAdNetworkManager.RecordRVAdComplete();
                             OnAdClosed.Invoke(isEligibleForReward);
-
-
                         },
                         () => {
 

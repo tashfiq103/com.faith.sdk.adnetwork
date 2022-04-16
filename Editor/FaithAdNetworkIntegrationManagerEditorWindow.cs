@@ -38,6 +38,9 @@ namespace com.faith.sdk.adnetwork
 
         private SerializedProperty _autoInitialize;
 
+        private SerializedProperty _intervalBetweenInterstitialAd;
+        private SerializedProperty _intervalForInterstitialAdAfterRV;
+
         private SerializedProperty _showGeneralSettings;
         private SerializedProperty _showAdNetworks;
         private SerializedProperty _showDebuggingSettings;
@@ -550,6 +553,31 @@ namespace com.faith.sdk.adnetwork
                             "For automatic initialization at start for all the adNetwork, you need to set the value = 'true'. If you want to manually initialize the sdk, make sure to call 'FaithAdNetworkManager.Initialize()' when the value = 'false'",
                             MessageType.Warning);
                     }
+
+                    EditorGUILayout.BeginHorizontal();
+                    {
+                        EditorGUILayout.LabelField(_intervalBetweenInterstitialAd.displayName, GUILayout.Width(FaithAdNetworkGeneralConfiguretionInfo.EDITOR_LABEL_WIDTH ));
+                        EditorGUI.BeginChangeCheck();
+                        _intervalBetweenInterstitialAd.floatValue = EditorGUILayout.FloatField(_intervalBetweenInterstitialAd.floatValue);
+                        if (EditorGUI.EndChangeCheck())
+                        {
+                            _intervalBetweenInterstitialAd.serializedObject.ApplyModifiedProperties();
+                        }
+                    }
+                    EditorGUILayout.EndHorizontal();
+
+                    EditorGUILayout.BeginHorizontal();
+                    {
+                        EditorGUILayout.LabelField(_intervalForInterstitialAdAfterRV.displayName, GUILayout.Width(FaithAdNetworkGeneralConfiguretionInfo.EDITOR_LABEL_WIDTH));
+                        EditorGUI.BeginChangeCheck();
+                        _intervalForInterstitialAdAfterRV.floatValue = EditorGUILayout.FloatField(_intervalForInterstitialAdAfterRV.floatValue);
+                        if (EditorGUI.EndChangeCheck())
+                        {
+                            _intervalForInterstitialAdAfterRV.serializedObject.ApplyModifiedProperties();
+                        }
+                    }
+                    EditorGUILayout.EndHorizontal();
+
                 }
                 EditorGUI.indentLevel -= 1;
             }
@@ -641,6 +669,8 @@ namespace com.faith.sdk.adnetwork
 
             _autoInitialize                     = _serializedFaithAdNetworkGeneralConfiguretionInfo.FindProperty("_autoInitialize");
 
+            _intervalBetweenInterstitialAd      = _serializedFaithAdNetworkGeneralConfiguretionInfo.FindProperty("_intervalBetweenInterstitialAd");
+            _intervalForInterstitialAdAfterRV   = _serializedFaithAdNetworkGeneralConfiguretionInfo.FindProperty("_intervalForInterstitialAdAfterRV");
 
             _showGeneralSettings                = _serializedFaithAdNetworkGeneralConfiguretionInfo.FindProperty("_showGeneralSetting");
             _showAdNetworks                      = _serializedFaithAdNetworkGeneralConfiguretionInfo.FindProperty("_showAdNetworks");
